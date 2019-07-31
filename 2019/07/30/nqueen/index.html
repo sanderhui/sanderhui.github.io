@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 柠檬不萌</title>
+  <title>N皇后问题 | 柠檬不萌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录学习的过程">
-<meta property="og:type" content="website">
-<meta property="og:title" content="柠檬不萌">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="N皇后问题问题： •    在n×n格的棋盘上放置彼此不受攻击的n个皇后。•    按照国际象棋的规则，皇后可以攻击与之处在同一行或同一列或同一斜线上的棋子。•    n后问题等价于在n×n格的棋盘上放置n个皇后，任何2个皇后不放在同一行或同一列或同一斜线上。  分析 判断解是否可行的条件  我们从第一行开始放皇后，第一行有n个位置可以放，我们用x[1]来表示第一行的皇后所在的列，第二行有n-1个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="N皇后问题">
+<meta property="og:url" content="http://yoursite.com/2019/07/30/nqueen/index.html">
 <meta property="og:site_name" content="柠檬不萌">
-<meta property="og:description" content="记录学习的过程">
+<meta property="og:description" content="N皇后问题问题： •    在n×n格的棋盘上放置彼此不受攻击的n个皇后。•    按照国际象棋的规则，皇后可以攻击与之处在同一行或同一列或同一斜线上的棋子。•    n后问题等价于在n×n格的棋盘上放置n个皇后，任何2个皇后不放在同一行或同一列或同一斜线上。  分析 判断解是否可行的条件  我们从第一行开始放皇后，第一行有n个位置可以放，我们用x[1]来表示第一行的皇后所在的列，第二行有n-1个">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2019062309474657.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwMDU0MzUy,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190623095424579.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwMDU0MzUy,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-07-31T01:19:38.168Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="柠檬不萌">
-<meta name="twitter:description" content="记录学习的过程">
+<meta name="twitter:title" content="N皇后问题">
+<meta name="twitter:description" content="N皇后问题问题： •    在n×n格的棋盘上放置彼此不受攻击的n个皇后。•    按照国际象棋的规则，皇后可以攻击与之处在同一行或同一列或同一斜线上的棋子。•    n后问题等价于在n×n格的棋盘上放置n个皇后，任何2个皇后不放在同一行或同一列或同一斜线上。  分析 判断解是否可行的条件  我们从第一行开始放皇后，第一行有n个位置可以放，我们用x[1]来表示第一行的皇后所在的列，第二行有n-1个">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/2019062309474657.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwMDU0MzUy,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="柠檬不萌" type="application/atom+xml">
   
@@ -153,103 +157,175 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-nqueen" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      N皇后问题
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/30/nqueen/" class="archive-article-date">
+
+        
+        <a href="/2019/07/30/nqueen/" class="archive-article-date">
   	<time datetime="2019-07-31T01:18:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-30</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/30/nqueen/">N皇后问题</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="N皇后问题"><a href="#N皇后问题" class="headerlink" title="N皇后问题"></a>N皇后问题</h1><h3 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h3><blockquote>
+<p>•    在n×n格的棋盘上放置彼此不受攻击的n个皇后。<br>•    按照国际象棋的规则，皇后可以攻击与之处在同一行或同一列或同一斜线上的棋子。<br>•    n后问题等价于在n×n格的棋盘上放置n个皇后，任何2个皇后不放在同一行或同一列或同一斜线上。</p>
+</blockquote>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><ol>
+<li><p>判断解是否可行的条件</p>
+<blockquote>
+<p>我们从第一行开始放皇后，第一行有n个位置可以放，我们用x[1]来表示第一行的皇后所在的列，第二行有n-1个位置可以放，我们用x[2]来表示第二行皇后所在的列······因此，我们用一个数组x[n]来表示问题的解，x[i]表示皇后i放在第i行第x[i]列。</p>
+</blockquote>
+<pre><code>x[i]≠x[j]，i≠j          式1</code></pre></li>
+</ol>
+<blockquote>
+<p>如何保证任何两个皇后不再一条斜线上？设两个皇后q1和q2放在（i，j）和（k，l）位置上，如果q1和q2在斜率为-1的对角线上，那么i - j = k - l成立，如果在斜率为1的对角线上，那么i + j = k + l成立，由此可知只要 | i - k | ≠ | j - l |成立，q1和q2就不再同一条斜线上。</p>
+</blockquote>
+<pre><code>| i - k | ≠ | j - l |    式2</code></pre><p><img src="https://img-blog.csdnimg.cn/2019062309474657.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwMDU0MzUy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<ol start="3">
+<li>以深度优先搜索解空间树</li>
+</ol>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;math.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">class Queen&#123;</span><br><span class="line">public:</span><br><span class="line">	bool Place(int k);</span><br><span class="line">	void BackTrack(int t);</span><br><span class="line">	int n, //皇后个数</span><br><span class="line">		* x; //当前解</span><br><span class="line">	long  sum; // 当前已经找到的可行方案数</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">bool Queen::Place(int k)</span><br><span class="line">&#123;</span><br><span class="line">	for(int j = 1; j&lt;k; j++)</span><br><span class="line">		if( ( abs( k - j ) == abs( x[j] - x[k] )) || ( x[k] == x[j] ) )</span><br><span class="line">			return false;</span><br><span class="line">	return true;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void Queen::BackTrack(int t)</span><br><span class="line">&#123;</span><br><span class="line">	if( t&gt;n )</span><br><span class="line">	&#123;</span><br><span class="line">		sum++;</span><br><span class="line"></span><br><span class="line">		for(int i=1;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			for(int j=1;j&lt;=n;j++)</span><br><span class="line">			&#123;</span><br><span class="line">				if(x[i]==j)</span><br><span class="line">					cout&lt;&lt;&quot;# &quot;;</span><br><span class="line">				else</span><br><span class="line">					cout&lt;&lt;&quot;- &quot;;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line">			cout&lt;&lt;&quot;第&quot;&lt;&lt;i&lt;&lt;&quot;个皇后放在棋盘的的第&quot;&lt;&lt;x[i]&lt;&lt;&quot;列&quot;&lt;&lt;endl;</span><br><span class="line">		&#125;</span><br><span class="line">		cout&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">		for(int i =1; i&lt;=n; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			x[t] = i;</span><br><span class="line">			if(Place(t)) BackTrack(t+1);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int n,sum;</span><br><span class="line">	while(1)</span><br><span class="line">	&#123;</span><br><span class="line">		cout&lt;&lt;&quot;请输入皇后的个数,0结束程序&quot;&lt;&lt;endl;</span><br><span class="line">		cin&gt;&gt;n;</span><br><span class="line">		if(n&lt;=0)break;</span><br><span class="line"></span><br><span class="line">		Queen Q;</span><br><span class="line">		Q.n = n;</span><br><span class="line">		Q.sum = 0;</span><br><span class="line"></span><br><span class="line">		Q.x = new int[n+1];</span><br><span class="line">		for(int i=0; i&lt;=n; i++)</span><br><span class="line">			Q.x[i] = 0;</span><br><span class="line">		cout&lt;&lt;Q.n&lt;&lt;&quot;皇后问题的各种摆法如下：&quot;&lt;&lt;endl;</span><br><span class="line">		Q.BackTrack(1);</span><br><span class="line">		sum = Q.sum;</span><br><span class="line"></span><br><span class="line">		cout&lt;&lt;n&lt;&lt;&quot; 个皇后，共有 &quot;&lt;&lt;sum&lt;&lt;&quot; 种摆法。&quot;&lt;&lt;endl&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">		delete []Q.x;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<p>运行截图<br><img src="https://img-blog.csdnimg.cn/20190623095424579.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwMDU0MzUy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/30/nqueen/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/28/ML/" class="archive-article-date">
-  	<time datetime="2019-07-29T04:35:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-28</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/07/28/ML/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据结构</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/28/ML/">数据结构</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/28/hello-world/" class="archive-article-date">
-  	<time datetime="2019-07-29T03:28:07.238Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/28/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -272,8 +348,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
