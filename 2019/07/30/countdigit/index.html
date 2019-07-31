@@ -6,19 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>countdigit | 柠檬不萌</title>
+  <title>统计数字问题 | 柠檬不萌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="To stive,to seek, to find, and not to yield.">
+  <meta name="description" content="统计数字问题 (1)、问题描述    一本书的页码从自然数1 开始顺序编码直到自然数n。书的页码按照通常的习惯编排，每个页码都不含多余的前导数字0。例如，第6 页用数字6 表示，而不是06 或006 等。数字计数问题要求对给定书的总页码n，计算出书的全部页码中分别用到多少次数字0，1， 2，…，9。    (2)、算法设计    给定表示书的总页码的10 进制整数n (1≤n≤10 ) 。编程计算">
 <meta property="og:type" content="article">
-<meta property="og:title" content="countdigit">
+<meta property="og:title" content="统计数字问题">
 <meta property="og:url" content="http://yoursite.com/2019/07/30/countdigit/index.html">
 <meta property="og:site_name" content="柠檬不萌">
-<meta property="og:description" content="To stive,to seek, to find, and not to yield.">
+<meta property="og:description" content="统计数字问题 (1)、问题描述    一本书的页码从自然数1 开始顺序编码直到自然数n。书的页码按照通常的习惯编排，每个页码都不含多余的前导数字0。例如，第6 页用数字6 表示，而不是06 或006 等。数字计数问题要求对给定书的总页码n，计算出书的全部页码中分别用到多少次数字0，1， 2，…，9。    (2)、算法设计    给定表示书的总页码的10 进制整数n (1≤n≤10 ) 。编程计算">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-31T01:21:29.041Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190316114420522.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwMDU0MzUy,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2019-07-31T03:03:30.223Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="countdigit">
-<meta name="twitter:description" content="To stive,to seek, to find, and not to yield.">
+<meta name="twitter:title" content="统计数字问题">
+<meta name="twitter:description" content="统计数字问题 (1)、问题描述    一本书的页码从自然数1 开始顺序编码直到自然数n。书的页码按照通常的习惯编排，每个页码都不含多余的前导数字0。例如，第6 页用数字6 表示，而不是06 或006 等。数字计数问题要求对给定书的总页码n，计算出书的全部页码中分别用到多少次数字0，1， 2，…，9。    (2)、算法设计    给定表示书的总页码的10 进制整数n (1≤n≤10 ) 。编程计算">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190316114420522.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwMDU0MzUy,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="柠檬不萌" type="application/atom+xml">
   
@@ -173,7 +175,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      countdigit
+      统计数字问题
     </h1>
   
 
@@ -186,7 +188,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="统计数字问题"><a href="#统计数字问题" class="headerlink" title="统计数字问题"></a>统计数字问题</h1><blockquote>
+<p>(1)、问题描述<br>    一本书的页码从自然数1 开始顺序编码直到自然数n。书的页码按照通常的习惯编排，每个页码都不含多余的前导数字0。例如，第6 页用数字6 表示，而不是06 或006 等。数字计数问题要求对给定书的总页码n，计算出书的全部页码中分别用到多少次数字0，1， 2，…，9。<br>    (2)、算法设计<br>    给定表示书的总页码的10 进制整数n (1≤n≤10 ) 。编程计算书的全部页码中分别用到多少次数字0，1，2，…，9。<a id="more"></a></p>
+</blockquote>
+<ol>
+<li><p>暴力法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line"></span><br><span class="line">	int c[10]=&#123;0&#125;;</span><br><span class="line"></span><br><span class="line">	int n;</span><br><span class="line"></span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line"></span><br><span class="line">	for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line"></span><br><span class="line">		int tmp=i;</span><br><span class="line"></span><br><span class="line">		while(tmp)&#123;</span><br><span class="line"></span><br><span class="line">			c[tmp%10]++;</span><br><span class="line"></span><br><span class="line">			tmp/=10;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	for(int i=0;i&lt;=9;i++)&#123;</span><br><span class="line"></span><br><span class="line">		cout&lt;&lt;c[i]&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>递归法<br><img src="https://img-blog.csdnimg.cn/20190316114420522.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwMDU0MzUy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<blockquote>
+<p>5.利用递归重复算出余数m1，最后减去多余的0，中间有0的也要考虑</p>
+</blockquote>
+</li>
+</ol>
+<p>代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cmath&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int c[10];</span><br><span class="line">//获取位数</span><br><span class="line">int get_wei(int n)</span><br><span class="line">&#123;</span><br><span class="line">	return  int(log10(n))+1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//获取最高位的数字</span><br><span class="line">int get_max(int n)</span><br><span class="line">&#123;</span><br><span class="line">	return n/int(pow(10,get_wei(n)-1));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//获取余数</span><br><span class="line">int get_yu(int n)</span><br><span class="line">&#123;</span><br><span class="line">	return n%int(pow(10,get_wei(n)-1));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//获取m位数零的个数</span><br><span class="line">int get_zero(int m)</span><br><span class="line">&#123;</span><br><span class="line">	if (m==1)</span><br><span class="line">		return 1;</span><br><span class="line">	return get_zero(m-1)+int(pow(10,m-1));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//总体流程</span><br><span class="line">void solve(int n)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	for(int i=0;i&lt;10;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		c[i] =c[i]+ get_max(n)*(get_wei(n)-1)*int(pow(10,get_wei(n)-2));</span><br><span class="line">	&#125;</span><br><span class="line">	for(int i =0;i&lt;get_max(n);i++)</span><br><span class="line">	&#123;</span><br><span class="line">		c[i] =c[i]+int(pow(10,get_wei(n)-1));</span><br><span class="line">	&#125;</span><br><span class="line">	c[get_max(n)] = c[get_max(n)]+get_yu(n)+1;</span><br><span class="line">	int t=get_yu(n);//余数</span><br><span class="line">	if(t==0)&#123;//如果t为0</span><br><span class="line">		c[0]+=get_wei(n)-1;//0位加len-1</span><br><span class="line">		return ;//返回结果</span><br><span class="line">	&#125;</span><br><span class="line">	int len=log10(t)+1;</span><br><span class="line">	if(len!=get_wei(n)-1)&#123;//若像4021这种情况，中间1个0也要相应的处理</span><br><span class="line">		c[0]+=(get_wei(n)-len-1)*(t+1);</span><br><span class="line">	&#125;</span><br><span class="line">	return solve(t);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int n;</span><br><span class="line">	bool flag = true;</span><br><span class="line">	while(flag)</span><br><span class="line">	&#123;</span><br><span class="line">		for(int i=0;i&lt;10;i++) //存数字赋初值</span><br><span class="line">		&#123;</span><br><span class="line">			c[i]=0;</span><br><span class="line">		&#125;</span><br><span class="line">		cout&lt;&lt;&quot;请输入一个页码。以0结束程序：&quot;&lt;&lt;endl;</span><br><span class="line">		cin&gt;&gt;n;</span><br><span class="line">		if(n==0)</span><br><span class="line">			flag =false;</span><br><span class="line">		solve(n);</span><br><span class="line">		c[0] = c[0]-get_zero(get_wei(n));</span><br><span class="line">		cout&lt;&lt;&quot;数字0-9出现的数字分别为：&quot;&lt;&lt;endl;</span><br><span class="line">		for(int j=0;j&lt;10;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			cout&lt;&lt;c[j]&lt;&lt;&quot; &quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		cout&lt;&lt;endl&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
 
       
@@ -278,6 +296,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/07/30/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
   
   
     <a href="/2019/07/30/nqueen/" id="article-nav-older" class="article-nav-link-wrap">

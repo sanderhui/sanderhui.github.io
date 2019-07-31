@@ -167,6 +167,70 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/30/hello-world/">Hello World</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/30/hello-world/" class="archive-article-date">
+  	<time datetime="2019-07-31T03:04:07.363Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/30/hello-world/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-countdigit" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -174,7 +238,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/30/countdigit/">countdigit</a>
+      <a class="article-title" href="/2019/07/30/countdigit/">统计数字问题</a>
     </h1>
   
 
@@ -187,6 +251,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
+        <h1 id="统计数字问题"><a href="#统计数字问题" class="headerlink" title="统计数字问题"></a>统计数字问题</h1><blockquote>
+<p>(1)、问题描述<br>    一本书的页码从自然数1 开始顺序编码直到自然数n。书的页码按照通常的习惯编排，每个页码都不含多余的前导数字0。例如，第6 页用数字6 表示，而不是06 或006 等。数字计数问题要求对给定书的总页码n，计算出书的全部页码中分别用到多少次数字0，1， 2，…，9。<br>    (2)、算法设计<br>    给定表示书的总页码的10 进制整数n (1≤n≤10 ) 。编程计算书的全部页码中分别用到多少次数字0，1，2，…，9。
         
       
 
@@ -252,24 +318,27 @@
         <h1 id="N皇后问题"><a href="#N皇后问题" class="headerlink" title="N皇后问题"></a>N皇后问题</h1><h3 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h3><blockquote>
 <p>•    在n×n格的棋盘上放置彼此不受攻击的n个皇后。<br>•    按照国际象棋的规则，皇后可以攻击与之处在同一行或同一列或同一斜线上的棋子。<br>•    n后问题等价于在n×n格的棋盘上放置n个皇后，任何2个皇后不放在同一行或同一列或同一斜线上。</p>
 </blockquote>
-<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><ol>
-<li><p>判断解是否可行的条件</p>
-<blockquote>
-<p>我们从第一行开始放皇后，第一行有n个位置可以放，我们用x[1]来表示第一行的皇后所在的列，第二行有n-1个位置可以放，我们用x[2]来表示第二行皇后所在的列······因此，我们用一个数组x[n]来表示问题的解，x[i]表示皇后i放在第i行第x[i]列。</p>
-</blockquote>
-<pre><code>x[i]≠x[j]，i≠j          式1</code></pre></li>
-</ol>
-<blockquote>
-<p>如何保证任何两个皇后不再一条斜线上？设两个皇后q1和q2放在（i，j）和（k，l）位置上，如果q1和q2在斜率为-1的对角线上，那么i - j = k - l成立，如果在斜率为1的对角线上，那么i + j = k + l成立，由此可知只要 | i - k | ≠ | j - l |成立，q1和q2就不再同一条斜线上。</p>
-</blockquote>
-<pre><code>| i - k | ≠ | j - l |    式2</code></pre><p><img src="https://img-blog.csdnimg.cn/2019062309474657.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwMDU0MzUy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<ol start="3">
-<li>以深度优先搜索解空间树</li>
-</ol>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;math.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">class Queen&#123;</span><br><span class="line">public:</span><br><span class="line">	bool Place(int k);</span><br><span class="line">	void BackTrack(int t);</span><br><span class="line">	int n, //皇后个数</span><br><span class="line">		* x; //当前解</span><br><span class="line">	long  sum; // 当前已经找到的可行方案数</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">bool Queen::Place(int k)</span><br><span class="line">&#123;</span><br><span class="line">	for(int j = 1; j&lt;k; j++)</span><br><span class="line">		if( ( abs( k - j ) == abs( x[j] - x[k] )) || ( x[k] == x[j] ) )</span><br><span class="line">			return false;</span><br><span class="line">	return true;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void Queen::BackTrack(int t)</span><br><span class="line">&#123;</span><br><span class="line">	if( t&gt;n )</span><br><span class="line">	&#123;</span><br><span class="line">		sum++;</span><br><span class="line"></span><br><span class="line">		for(int i=1;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			for(int j=1;j&lt;=n;j++)</span><br><span class="line">			&#123;</span><br><span class="line">				if(x[i]==j)</span><br><span class="line">					cout&lt;&lt;&quot;# &quot;;</span><br><span class="line">				else</span><br><span class="line">					cout&lt;&lt;&quot;- &quot;;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line">			cout&lt;&lt;&quot;第&quot;&lt;&lt;i&lt;&lt;&quot;个皇后放在棋盘的的第&quot;&lt;&lt;x[i]&lt;&lt;&quot;列&quot;&lt;&lt;endl;</span><br><span class="line">		&#125;</span><br><span class="line">		cout&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">		for(int i =1; i&lt;=n; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			x[t] = i;</span><br><span class="line">			if(Place(t)) BackTrack(t+1);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int n,sum;</span><br><span class="line">	while(1)</span><br><span class="line">	&#123;</span><br><span class="line">		cout&lt;&lt;&quot;请输入皇后的个数,0结束程序&quot;&lt;&lt;endl;</span><br><span class="line">		cin&gt;&gt;n;</span><br><span class="line">		if(n&lt;=0)break;</span><br><span class="line"></span><br><span class="line">		Queen Q;</span><br><span class="line">		Q.n = n;</span><br><span class="line">		Q.sum = 0;</span><br><span class="line"></span><br><span class="line">		Q.x = new int[n+1];</span><br><span class="line">		for(int i=0; i&lt;=n; i++)</span><br><span class="line">			Q.x[i] = 0;</span><br><span class="line">		cout&lt;&lt;Q.n&lt;&lt;&quot;皇后问题的各种摆法如下：&quot;&lt;&lt;endl;</span><br><span class="line">		Q.BackTrack(1);</span><br><span class="line">		sum = Q.sum;</span><br><span class="line"></span><br><span class="line">		cout&lt;&lt;n&lt;&lt;&quot; 个皇后，共有 &quot;&lt;&lt;sum&lt;&lt;&quot; 种摆法。&quot;&lt;&lt;endl&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">		delete []Q.x;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<!-- more -- >
+### 分析
+1. 判断解是否可行的条件
+ >我们从第一行开始放皇后，第一行有n个位置可以放，我们用x[1]来表示第一行的皇后所在的列，第二行有n-1个位置可以放，我们用x[2]来表示第二行皇后所在的列······因此，我们用一个数组x[n]来表示问题的解，x[i]表示皇后i放在第i行第x[i]列。
+
+            x[i]≠x[j]，i≠j          式1
+
+>如何保证任何两个皇后不再一条斜线上？设两个皇后q1和q2放在（i，j）和（k，l）位置上，如果q1和q2在斜率为-1的对角线上，那么i - j = k - l成立，如果在斜率为1的对角线上，那么i + j = k + l成立，由此可知只要 | i - k | ≠ | j - l |成立，q1和q2就不再同一条斜线上。
+
+            | i - k | ≠ | j - l |    式2
+
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2019062309474657.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwMDU0MzUy,size_16,color_FFFFFF,t_70)
+
+3. 以深度优先搜索解空间树
+
+### 代码
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;math.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">class Queen&#123;</span><br><span class="line">public:</span><br><span class="line">	bool Place(int k);</span><br><span class="line">	void BackTrack(int t);</span><br><span class="line">	int n, //皇后个数</span><br><span class="line">		* x; //当前解</span><br><span class="line">	long  sum; // 当前已经找到的可行方案数</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">bool Queen::Place(int k)</span><br><span class="line">&#123;</span><br><span class="line">	for(int j = 1; j&lt;k; j++)</span><br><span class="line">		if( ( abs( k - j ) == abs( x[j] - x[k] )) || ( x[k] == x[j] ) )</span><br><span class="line">			return false;</span><br><span class="line">	return true;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void Queen::BackTrack(int t)</span><br><span class="line">&#123;</span><br><span class="line">	if( t&gt;n )</span><br><span class="line">	&#123;</span><br><span class="line">		sum++;</span><br><span class="line"></span><br><span class="line">		for(int i=1;i&lt;=n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			for(int j=1;j&lt;=n;j++)</span><br><span class="line">			&#123;</span><br><span class="line">				if(x[i]==j)</span><br><span class="line">					cout&lt;&lt;&quot;# &quot;;</span><br><span class="line">				else</span><br><span class="line">					cout&lt;&lt;&quot;- &quot;;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line">			cout&lt;&lt;&quot;第&quot;&lt;&lt;i&lt;&lt;&quot;个皇后放在棋盘的的第&quot;&lt;&lt;x[i]&lt;&lt;&quot;列&quot;&lt;&lt;endl;</span><br><span class="line">		&#125;</span><br><span class="line">		cout&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">		for(int i =1; i&lt;=n; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			x[t] = i;</span><br><span class="line">			if(Place(t)) BackTrack(t+1);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int n,sum;</span><br><span class="line">	while(1)</span><br><span class="line">	&#123;</span><br><span class="line">		cout&lt;&lt;&quot;请输入皇后的个数,0结束程序&quot;&lt;&lt;endl;</span><br><span class="line">		cin&gt;&gt;n;</span><br><span class="line">		if(n&lt;=0)break;</span><br><span class="line"></span><br><span class="line">		Queen Q;</span><br><span class="line">		Q.n = n;</span><br><span class="line">		Q.sum = 0;</span><br><span class="line"></span><br><span class="line">		Q.x = new int[n+1];</span><br><span class="line">		for(int i=0; i&lt;=n; i++)</span><br><span class="line">			Q.x[i] = 0;</span><br><span class="line">		cout&lt;&lt;Q.n&lt;&lt;&quot;皇后问题的各种摆法如下：&quot;&lt;&lt;endl;</span><br><span class="line">		Q.BackTrack(1);</span><br><span class="line">		sum = Q.sum;</span><br><span class="line"></span><br><span class="line">		cout&lt;&lt;n&lt;&lt;&quot; 个皇后，共有 &quot;&lt;&lt;sum&lt;&lt;&quot; 种摆法。&quot;&lt;&lt;endl&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">		delete []Q.x;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行截图<br><img src="https://img-blog.csdnimg.cn/20190623095424579.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwMDU0MzUy,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-
+-->
       
 
       
@@ -318,7 +387,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/28/ML/">数据结构</a>
+      <a class="article-title" href="/2019/07/28/ML/">数据结构排序算法</a>
     </h1>
   
 
@@ -331,7 +400,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="1-冒泡排序"><a href="#1-冒泡排序" class="headerlink" title="1. 冒泡排序"></a>1. 冒泡排序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">def Bubblesort1(list1):</span><br><span class="line">    &quot;&quot;&quot;冒泡排序用reduce实现&quot;&quot;&quot;</span><br><span class="line">    list2 = []</span><br><span class="line">    while list1:</span><br><span class="line">        minValue = reduce(lambda x, y: x if x &lt; y else y, list1)</span><br><span class="line">        list2.append(minValue)</span><br><span class="line">        list1.remove(minValue)</span><br><span class="line">    return list2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def Bubblesort2(list1):</span><br><span class="line">    &apos;&apos;&apos;冒泡算法&apos;&apos;&apos;</span><br><span class="line">    n = len(list1)</span><br><span class="line">    for i in range(n - 1):</span><br><span class="line">        for j in range(i + 1, n):</span><br><span class="line">            if list1[i] &gt; list1[j]:</span><br><span class="line">                list1[i], list1[j] = list1[j], list1[i]</span><br><span class="line">    return list1</span><br><span class="line"></span><br><span class="line">def Bubblesort3(list1):</span><br><span class="line">    &apos;&apos;&apos;冒泡算法&apos;&apos;&apos;</span><br><span class="line">    n = len(list1)</span><br><span class="line">    for i in range(n - 1):</span><br><span class="line">        for j in range(0, n - i - 1):</span><br><span class="line">            if list1[j] &gt; list1[j + 1]:</span><br><span class="line">                list1[j], list1[j + 1] = list1[j + 1], list1[j]</span><br><span class="line">    return list1</span><br><span class="line"></span><br><span class="line">def bubble_sort(origin_items, comp=lambda x, y: x &gt; y):</span><br><span class="line">    &quot;&quot;&quot;高质量冒泡排序(搅拌排序)&quot;&quot;&quot;</span><br><span class="line">    items = origin_items[:]</span><br><span class="line">    for i in range(len(items) - 1):</span><br><span class="line">        swapped = False</span><br><span class="line">        for j in range(i, len(items) - 1 - i):</span><br><span class="line">            if comp(items[j], items[j + 1]):</span><br><span class="line">                items[j], items[j + 1] = items[j + 1], items[j]</span><br><span class="line">                swapped = True</span><br><span class="line">        if swapped:</span><br><span class="line">            swapped = False</span><br><span class="line">            for j in range(len(items) - 2 - i, i, -1):</span><br><span class="line">                if comp(items[j - 1], items[j]):</span><br><span class="line">                    items[j], items[j - 1] = items[j - 1], items[j]</span><br><span class="line">                    swapped = True</span><br><span class="line">        if not swapped:</span><br><span class="line">            break</span><br><span class="line">    return items</span><br></pre></td></tr></table></figure>
+        <h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><p>&lt;! –more –&gt;</p>
+<h2 id="1-冒泡排序"><a href="#1-冒泡排序" class="headerlink" title="1. 冒泡排序"></a>1. 冒泡排序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">def Bubblesort1(list1):</span><br><span class="line">    &quot;&quot;&quot;冒泡排序用reduce实现&quot;&quot;&quot;</span><br><span class="line">    list2 = []</span><br><span class="line">    while list1:</span><br><span class="line">        minValue = reduce(lambda x, y: x if x &lt; y else y, list1)</span><br><span class="line">        list2.append(minValue)</span><br><span class="line">        list1.remove(minValue)</span><br><span class="line">    return list2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def Bubblesort2(list1):</span><br><span class="line">    &apos;&apos;&apos;冒泡算法&apos;&apos;&apos;</span><br><span class="line">    n = len(list1)</span><br><span class="line">    for i in range(n - 1):</span><br><span class="line">        for j in range(i + 1, n):</span><br><span class="line">            if list1[i] &gt; list1[j]:</span><br><span class="line">                list1[i], list1[j] = list1[j], list1[i]</span><br><span class="line">    return list1</span><br><span class="line"></span><br><span class="line">def Bubblesort3(list1):</span><br><span class="line">    &apos;&apos;&apos;冒泡算法&apos;&apos;&apos;</span><br><span class="line">    n = len(list1)</span><br><span class="line">    for i in range(n - 1):</span><br><span class="line">        for j in range(0, n - i - 1):</span><br><span class="line">            if list1[j] &gt; list1[j + 1]:</span><br><span class="line">                list1[j], list1[j + 1] = list1[j + 1], list1[j]</span><br><span class="line">    return list1</span><br><span class="line"></span><br><span class="line">def bubble_sort(origin_items, comp=lambda x, y: x &gt; y):</span><br><span class="line">    &quot;&quot;&quot;高质量冒泡排序(搅拌排序)&quot;&quot;&quot;</span><br><span class="line">    items = origin_items[:]</span><br><span class="line">    for i in range(len(items) - 1):</span><br><span class="line">        swapped = False</span><br><span class="line">        for j in range(i, len(items) - 1 - i):</span><br><span class="line">            if comp(items[j], items[j + 1]):</span><br><span class="line">                items[j], items[j + 1] = items[j + 1], items[j]</span><br><span class="line">                swapped = True</span><br><span class="line">        if swapped:</span><br><span class="line">            swapped = False</span><br><span class="line">            for j in range(len(items) - 2 - i, i, -1):</span><br><span class="line">                if comp(items[j - 1], items[j]):</span><br><span class="line">                    items[j], items[j - 1] = items[j - 1], items[j]</span><br><span class="line">                    swapped = True</span><br><span class="line">        if not swapped:</span><br><span class="line">            break</span><br><span class="line">    return items</span><br></pre></td></tr></table></figure>
 
 <h2 id="2-选择排序"><a href="#2-选择排序" class="headerlink" title="2. 选择排序"></a>2. 选择排序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def Selectsort(list1):</span><br><span class="line">    n = len(list1)</span><br><span class="line">    for i in range(n - 1):</span><br><span class="line">        min_index = i</span><br><span class="line">        for j in range(i + 1, n):</span><br><span class="line">            if list1[min_index] &gt; list1[j]:</span><br><span class="line">                min_index = j</span><br><span class="line">        list1[min_index], list1[i] = list1[i], list1[min_index]</span><br><span class="line">    return list1</span><br></pre></td></tr></table></figure>
 
@@ -356,81 +426,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/07/28/ML/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/28/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/28/hello-world/" class="archive-article-date">
-  	<time datetime="2019-07-29T03:28:07.238Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/28/hello-world/">展开全文 >></a>
         </p>
       
 
