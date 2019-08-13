@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Git学习 | 柠檬不萌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.简介和安装设置 Git是目前世界上最先进的分布式版本控制系统">
+  <meta name="description" content="1.简介和安装设置Git是目前世界上最先进的分布式版本控制系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git学习">
 <meta property="og:url" content="http://yoursite.com/2019/07/01/Git/index.html">
 <meta property="og:site_name" content="柠檬不萌">
-<meta property="og:description" content="1.简介和安装设置 Git是目前世界上最先进的分布式版本控制系统">
+<meta property="og:description" content="1.简介和安装设置Git是目前世界上最先进的分布式版本控制系统">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-13T01:08:27.102Z">
+<meta property="og:updated_time" content="2019-08-13T01:12:06.941Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git学习">
-<meta name="twitter:description" content="1.简介和安装设置 Git是目前世界上最先进的分布式版本控制系统">
+<meta name="twitter:description" content="1.简介和安装设置Git是目前世界上最先进的分布式版本控制系统">
   
     <link rel="alternative" href="/atom.xml" title="柠檬不萌" type="application/atom+xml">
   
@@ -186,14 +186,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-简介和安装设置"><a href="#1-简介和安装设置" class="headerlink" title="1.简介和安装设置"></a>1.简介和安装设置</h1><blockquote>
-<p>Git是目前世界上最先进的分布式版本控制系统</p>
-</blockquote>
-<!-- more -- >
-
-linux 下安装git
-
-
+        <h1 id="1-简介和安装设置"><a href="#1-简介和安装设置" class="headerlink" title="1.简介和安装设置"></a>1.简介和安装设置</h1><p>Git是目前世界上最先进的分布式版本控制系统  <a id="more"></a></p>
+<p>linux 下安装git</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install git</span><br></pre></td></tr></table></figure>
 
 <p>安装完后需最后一步设置</p>
@@ -332,7 +326,7 @@ linux 下安装git
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:sanderhui/Python.git</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>还可以用<a href="https://github.com/michaelliao/gitskills.git这样的地址,Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。">https://github.com/michaelliao/gitskills.git这样的地址,Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。</a></p>
+<p>还可以用<a href="https://github.com/michaelliao/gitskills.git这样的地址,Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。" target="_blank" rel="noopener">https://github.com/michaelliao/gitskills.git这样的地址,Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。</a></p>
 </blockquote>
 <h1 id="4-分支管理"><a href="#4-分支管理" class="headerlink" title="4.分支管理"></a>4.分支管理</h1><p>每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即master分支。HEAD严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支。</p>
 <ol>
@@ -393,14 +387,14 @@ linux 下安装git
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">git tag -a &lt;tagname&gt; -m &quot;blablabla...&quot;</span><br></pre></td></tr></table></figure>
 
 <p>可以指定标签信息</p>
-<p>删除标签<strong>git tag -d v0.1</strong><br>推送某个标签到远程<strong>git push origin <tagname></strong></p>
+<p>删除标签<strong>git tag -d v0.1</strong><br>推送某个标签到远程<strong>git push origin <tagname></tagname></strong></p>
 <p>一次性推送全部尚未推送到远程的本地标签 <strong>git push origin –tags</strong><br>标签已经推送到远程，要删除远程标签，先从本地删除:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag -d v0.9</span><br></pre></td></tr></table></figure>
 
 <p>从远程删除。删除命令也是push</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :refs/tags/v0.9</span><br></pre></td></tr></table></figure>
 
-<h2 id="参与开源项目"><a href="#参与开源项目" class="headerlink" title="参与开源项目"></a>参与开源项目</h2><p>比如人气极高的bootstrap项目，这是一个非常强大的CSS框架，你可以访问它的项目主页<a href="https://github.com/twbs/bootstrap，点“Fork”就在自己的账号下克隆了一个bootstrap仓库，然后，从自己的账号下clone">https://github.com/twbs/bootstrap，点“Fork”就在自己的账号下克隆了一个bootstrap仓库，然后，从自己的账号下clone</a></p>
+<h2 id="参与开源项目"><a href="#参与开源项目" class="headerlink" title="参与开源项目"></a>参与开源项目</h2><p>比如人气极高的bootstrap项目，这是一个非常强大的CSS框架，你可以访问它的项目主页<a href="https://github.com/twbs/bootstrap，点“Fork”就在自己的账号下克隆了一个bootstrap仓库，然后，从自己的账号下clone" target="_blank" rel="noopener">https://github.com/twbs/bootstrap，点“Fork”就在自己的账号下克隆了一个bootstrap仓库，然后，从自己的账号下clone</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:sanderhui/bootstrap.git</span><br></pre></td></tr></table></figure>
 
 <h2 id="忽略特殊文件"><a href="#忽略特殊文件" class="headerlink" title="忽略特殊文件"></a>忽略特殊文件</h2><p>在Git工作区的根目录下创建一个特殊的.gitignore文件，然后把要忽略的文件名填进去，Git就会自动忽略这些文件。</p>
@@ -431,7 +425,7 @@ linux 下安装git
 </li>
 </ol>
 <p>如果团队很小，把每个人的公钥收集起来放到服务器的/home/git/.ssh/authorized_keys文件里就是可行的。如果团队有几百号人，就没法这么玩了，这时，可以用Gitosis来管理公钥</p>
--->
+
       
 
       
@@ -557,7 +551,7 @@ linux 下安装git
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-简介和安装设置"><span class="toc-number">1.</span> <span class="toc-text">1.简介和安装设置</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-简介和安装设置"><span class="toc-number">1.</span> <span class="toc-text">1.简介和安装设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建版本库-repository"><span class="toc-number">1.1.</span> <span class="toc-text">创建版本库 (repository)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改文件"><span class="toc-number">1.2.</span> <span class="toc-text">修改文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-仓库的操作"><span class="toc-number">2.</span> <span class="toc-text">2. 仓库的操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#版本回退"><span class="toc-number">2.1.</span> <span class="toc-text">版本回退</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#回退上一个版本"><span class="toc-number">2.2.</span> <span class="toc-text">回退上一个版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工作区"><span class="toc-number">2.3.</span> <span class="toc-text">工作区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#版本库"><span class="toc-number">2.4.</span> <span class="toc-text">版本库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#管理修改"><span class="toc-number">2.5.</span> <span class="toc-text">管理修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#撤销修改"><span class="toc-number">2.6.</span> <span class="toc-text">撤销修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除文件"><span class="toc-number">2.7.</span> <span class="toc-text">删除文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-远程仓库"><span class="toc-number">3.</span> <span class="toc-text">3.远程仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#添加远程库"><span class="toc-number">3.1.</span> <span class="toc-text">添加远程库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#从远程库克隆"><span class="toc-number">3.2.</span> <span class="toc-text">从远程库克隆</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-分支管理"><span class="toc-number">4.</span> <span class="toc-text">4.分支管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#解决冲突"><span class="toc-number">4.1.</span> <span class="toc-text">解决冲突</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分支管理策略"><span class="toc-number">4.2.</span> <span class="toc-text">分支管理策略</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bug分支"><span class="toc-number">4.3.</span> <span class="toc-text">bug分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Feature分支"><span class="toc-number">4.4.</span> <span class="toc-text">Feature分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多人协作"><span class="toc-number">4.5.</span> <span class="toc-text">多人协作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参与开源项目"><span class="toc-number">4.6.</span> <span class="toc-text">参与开源项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#忽略特殊文件"><span class="toc-number">4.7.</span> <span class="toc-text">忽略特殊文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-搭建Git服务器"><span class="toc-number">5.</span> <span class="toc-text">6. 搭建Git服务器</span></a></li></ol>
                     </div>
                 </span>
             </div>
