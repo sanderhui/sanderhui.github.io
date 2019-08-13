@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="柠檬不萌">
 <meta property="og:description" content="1.简介和安装设置Git是目前世界上最先进的分布式版本控制系统">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-13T01:12:06.941Z">
+<meta property="og:updated_time" content="2019-08-13T02:29:32.936Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git学习">
 <meta name="twitter:description" content="1.简介和安装设置Git是目前世界上最先进的分布式版本控制系统">
@@ -325,9 +325,7 @@
 <h2 id="从远程库克隆"><a href="#从远程库克隆" class="headerlink" title="从远程库克隆"></a>从远程库克隆</h2><p>git clone克隆一个本地库：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:sanderhui/Python.git</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>还可以用<a href="https://github.com/michaelliao/gitskills.git这样的地址,Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。" target="_blank" rel="noopener">https://github.com/michaelliao/gitskills.git这样的地址,Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。</a></p>
-</blockquote>
+<p>还可以用 <a href="https://github.com/michaelliao/gitskills.git" target="_blank" rel="noopener">https://github.com/michaelliao/gitskills.git</a> 这样的地址,Git支持多种协议，默认的 git:// 使用ssh，但也可以使用https等其他协议。使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。</p>
 <h1 id="4-分支管理"><a href="#4-分支管理" class="headerlink" title="4.分支管理"></a>4.分支管理</h1><p>每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在Git里，这个分支叫主分支，即master分支。HEAD严格来说不是指向提交，而是指向master，master才是指向提交的，所以，HEAD指向的就是当前分支。</p>
 <ol>
 <li>创建dev分支，然后切换dev分支<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b dev</span><br></pre></td></tr></table></figure>
@@ -375,16 +373,20 @@
 <li></li>
 </ul>
 <blockquote>
-<p>远程库clone时，默认情况下，只能看到本地的master分支,要在dev分支?&gt;上开发，就必须创建远程origin的dev分支到本地<figure class="highlight plain"><figcaption><span>checkout -b dev origin/dev```就可以在dev上继续修改,时不时地把dev分支push到远程```git push origin dev```如果你也对同样的文件作了修改，推送时会有冲突，先用```git pull --set-upstream-to</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p>远程库clone时，默认情况下，只能看到本地的master分支,要在dev分支?上开发，就必须创建远程origin的dev分支到本地<strong>git checkout -b dev origin/dev</strong>就可以在dev上继续修改,时不时地把dev分支push到远程<strong>git push origin dev</strong>如果你也对同样的文件作了修改，推送时会有冲突，先用<strong>git pull –set-upstream-to=origin/dev dev</strong>把最新的提交从origin/dev抓下来，<strong>git branch –set-upstream-to=origin/<branch> dev</branch></strong>然后，在本地合并，解决冲突，再推送<strong>git pull</strong></p>
 </blockquote>
-<p>git rebase</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">rebase操作可以把本地未push的分叉提交历史整理成直线；</span><br><span class="line"></span><br><span class="line">rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。</span><br><span class="line"></span><br><span class="line"># 5. 标签管理</span><br><span class="line">切换到需要打标签的分支上</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase</span><br></pre></td></tr></table></figure>
 
-<p> git tag v1.0</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">**git**查看所有标签</span><br><span class="line"></span><br><span class="line">给commit id打标签</span><br></pre></td></tr></table></figure>
+<p>rebase操作可以把本地未push的分叉提交历史整理成直线；</p>
+<p>rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。</p>
+<h1 id="5-标签管理"><a href="#5-标签管理" class="headerlink" title="5. 标签管理"></a>5. 标签管理</h1><p>切换到需要打标签的分支上</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag v1.0</span><br></pre></td></tr></table></figure>
 
-<p>git tag v0.9 f52c633</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">git tag -a &lt;tagname&gt; -m &quot;blablabla...&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>git</strong>查看所有标签</p>
+<p>给commit id打标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag v0.9 f52c633</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag -a &lt;tagname&gt; -m &quot;blablabla...&quot;</span><br></pre></td></tr></table></figure>
 
 <p>可以指定标签信息</p>
 <p>删除标签<strong>git tag -d v0.1</strong><br>推送某个标签到远程<strong>git push origin <tagname></tagname></strong></p>
@@ -394,18 +396,16 @@
 <p>从远程删除。删除命令也是push</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :refs/tags/v0.9</span><br></pre></td></tr></table></figure>
 
-<h2 id="参与开源项目"><a href="#参与开源项目" class="headerlink" title="参与开源项目"></a>参与开源项目</h2><p>比如人气极高的bootstrap项目，这是一个非常强大的CSS框架，你可以访问它的项目主页<a href="https://github.com/twbs/bootstrap，点“Fork”就在自己的账号下克隆了一个bootstrap仓库，然后，从自己的账号下clone" target="_blank" rel="noopener">https://github.com/twbs/bootstrap，点“Fork”就在自己的账号下克隆了一个bootstrap仓库，然后，从自己的账号下clone</a></p>
+<h2 id="参与开源项目"><a href="#参与开源项目" class="headerlink" title="参与开源项目"></a>参与开源项目</h2><p>比如人气极高的bootstrap项目，这是一个非常强大的CSS框架，你可以访问它的项目主页<a href="https://github.com/twbs/bootstrap" target="_blank" rel="noopener">https://github.com/twbs/bootstrap</a><br>，点“Fork”就在自己的账号下克隆了一个bootstrap仓库，然后，从自己的账号下clone</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:sanderhui/bootstrap.git</span><br></pre></td></tr></table></figure>
 
 <h2 id="忽略特殊文件"><a href="#忽略特殊文件" class="headerlink" title="忽略特殊文件"></a>忽略特殊文件</h2><p>在Git工作区的根目录下创建一个特殊的.gitignore文件，然后把要忽略的文件名填进去，Git就会自动忽略这些文件。</p>
 <h1 id="6-搭建Git服务器"><a href="#6-搭建Git服务器" class="headerlink" title="6. 搭建Git服务器"></a>6. 搭建Git服务器</h1><ol>
 <li><p>安装git</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install git</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>创建一个git用户，用来运行git服务<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo adduser git</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
+<li><p>创建一个git用户，用来运行git服务</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo adduser git</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>创建证书登录<br>收集所有需要登录的用户的公钥，就是他们自己的id_rsa.pub文件，把所有公钥导入到/home/git/.ssh/authorized_keys文件里，一行一个。</p>
 </li>
@@ -417,11 +417,17 @@
 <p>Git就会创建一个裸仓库，裸仓库没有工作区，因为服务器上的Git仓库纯粹是为了共享，所以不让用户直接登录到服务器上去改工作区，并且服务器上的Git仓库通常都以.git结尾。然后，把owner改为git：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R git:git sample.git</span><br></pre></td></tr></table></figure>
 
-<ol start="4">
-<li><p>禁用shell登录：<br>出于安全考虑，第二步创建的git用户不允许登录shell，这可以通过编辑/etc/passwd文件完成。找到类似下面的一行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">改为</span><br><span class="line">```git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>禁用shell登录：<br>出于安全考虑，第二步创建的git用户不允许登录shell，这可以通过编辑/etc/passwd文件完成。找到类似下面的一行：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git:x:1001:1001:,,,:/home/git:/bin/bash</span><br></pre></td></tr></table></figure>
+
 </li>
-<li><p>克隆远程仓库<br><code>git clone git@server:/srv/sample.git</code></p>
+</ol>
+<p>改为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>克隆远程仓库<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@server:/srv/sample.git</span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
 <p>如果团队很小，把每个人的公钥收集起来放到服务器的/home/git/.ssh/authorized_keys文件里就是可行的。如果团队有几百号人，就没法这么玩了，这时，可以用Gitosis来管理公钥</p>
@@ -551,7 +557,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-简介和安装设置"><span class="toc-number">1.</span> <span class="toc-text">1.简介和安装设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建版本库-repository"><span class="toc-number">1.1.</span> <span class="toc-text">创建版本库 (repository)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改文件"><span class="toc-number">1.2.</span> <span class="toc-text">修改文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-仓库的操作"><span class="toc-number">2.</span> <span class="toc-text">2. 仓库的操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#版本回退"><span class="toc-number">2.1.</span> <span class="toc-text">版本回退</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#回退上一个版本"><span class="toc-number">2.2.</span> <span class="toc-text">回退上一个版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工作区"><span class="toc-number">2.3.</span> <span class="toc-text">工作区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#版本库"><span class="toc-number">2.4.</span> <span class="toc-text">版本库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#管理修改"><span class="toc-number">2.5.</span> <span class="toc-text">管理修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#撤销修改"><span class="toc-number">2.6.</span> <span class="toc-text">撤销修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除文件"><span class="toc-number">2.7.</span> <span class="toc-text">删除文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-远程仓库"><span class="toc-number">3.</span> <span class="toc-text">3.远程仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#添加远程库"><span class="toc-number">3.1.</span> <span class="toc-text">添加远程库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#从远程库克隆"><span class="toc-number">3.2.</span> <span class="toc-text">从远程库克隆</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-分支管理"><span class="toc-number">4.</span> <span class="toc-text">4.分支管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#解决冲突"><span class="toc-number">4.1.</span> <span class="toc-text">解决冲突</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分支管理策略"><span class="toc-number">4.2.</span> <span class="toc-text">分支管理策略</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bug分支"><span class="toc-number">4.3.</span> <span class="toc-text">bug分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Feature分支"><span class="toc-number">4.4.</span> <span class="toc-text">Feature分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多人协作"><span class="toc-number">4.5.</span> <span class="toc-text">多人协作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参与开源项目"><span class="toc-number">4.6.</span> <span class="toc-text">参与开源项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#忽略特殊文件"><span class="toc-number">4.7.</span> <span class="toc-text">忽略特殊文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-搭建Git服务器"><span class="toc-number">5.</span> <span class="toc-text">6. 搭建Git服务器</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-简介和安装设置"><span class="toc-number">1.</span> <span class="toc-text">1.简介和安装设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建版本库-repository"><span class="toc-number">1.1.</span> <span class="toc-text">创建版本库 (repository)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改文件"><span class="toc-number">1.2.</span> <span class="toc-text">修改文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-仓库的操作"><span class="toc-number">2.</span> <span class="toc-text">2. 仓库的操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#版本回退"><span class="toc-number">2.1.</span> <span class="toc-text">版本回退</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#回退上一个版本"><span class="toc-number">2.2.</span> <span class="toc-text">回退上一个版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工作区"><span class="toc-number">2.3.</span> <span class="toc-text">工作区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#版本库"><span class="toc-number">2.4.</span> <span class="toc-text">版本库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#管理修改"><span class="toc-number">2.5.</span> <span class="toc-text">管理修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#撤销修改"><span class="toc-number">2.6.</span> <span class="toc-text">撤销修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除文件"><span class="toc-number">2.7.</span> <span class="toc-text">删除文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-远程仓库"><span class="toc-number">3.</span> <span class="toc-text">3.远程仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#添加远程库"><span class="toc-number">3.1.</span> <span class="toc-text">添加远程库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#从远程库克隆"><span class="toc-number">3.2.</span> <span class="toc-text">从远程库克隆</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-分支管理"><span class="toc-number">4.</span> <span class="toc-text">4.分支管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#解决冲突"><span class="toc-number">4.1.</span> <span class="toc-text">解决冲突</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分支管理策略"><span class="toc-number">4.2.</span> <span class="toc-text">分支管理策略</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bug分支"><span class="toc-number">4.3.</span> <span class="toc-text">bug分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Feature分支"><span class="toc-number">4.4.</span> <span class="toc-text">Feature分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多人协作"><span class="toc-number">4.5.</span> <span class="toc-text">多人协作</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-标签管理"><span class="toc-number">5.</span> <span class="toc-text">5. 标签管理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#参与开源项目"><span class="toc-number">5.1.</span> <span class="toc-text">参与开源项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#忽略特殊文件"><span class="toc-number">5.2.</span> <span class="toc-text">忽略特殊文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-搭建Git服务器"><span class="toc-number">6.</span> <span class="toc-text">6. 搭建Git服务器</span></a></li></ol>
                     </div>
                 </span>
             </div>
